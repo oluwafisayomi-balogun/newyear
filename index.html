@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Year Countdown 🎉</title>
+  <link rel="icon" type="image/x-icon" href="favicon.svg" />
+
+
+  <!-- Google Fonts: Bebas Neue for display, Nunito for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Background decoration blobs (pure CSS animated) ── -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="blob blob4"></div>
+
+  <!-- ── Canvas for confetti (drawn via JS on celebration) ── -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ── Main countdown UI ── -->
+  <div class="container">
+
+    <!-- Small decorative label above the title -->
+    <p class="eyebrow">✦ The clock is ticking ✦</p>
+    <p class="subtitle">Countdown to midnight</p>
+
+    <!-- Page title -->
+    <h1>NEW YEAR</h1>
+    
+
+    <!-- Timezone selector: auto-detects user's tz, populated by JS -->
+    <div class="tz-wrapper">
+      <span>🌍</span>
+      <select id="tzSelect"></select>
+    </div>
+
+    <!-- Countdown blocks: Days, Hours, Minutes, Seconds -->
+    <div class="countdown">
+      <div class="unit">
+        <div class="digits" id="days">00</div>
+        <div class="label">Days</div>
+      </div>
+
+      <div class="separator">:</div>
+
+      <div class="unit">
+        <div class="digits" id="hours">00</div>
+        <div class="label">Hours</div>
+      </div>
+
+      <div class="separator">:</div>
+
+      <div class="unit">
+        <div class="digits" id="minutes">00</div>
+        <div class="label">Minutes</div>
+      </div>
+
+      <div class="separator">:</div>
+
+      <div class="unit">
+        <div class="digits" id="seconds">00</div>
+        <div class="label">Seconds</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Celebration overlay: shown when countdown hits zero ── -->
+  <div id="celebration">
+    <div class="emojis-row">🎉🎊🥂🎆🎇🎊🎉</div>
+ 
+    <!-- Year is injected by JS at the moment of celebration -->
+    <div class="welcome-year" id="welcomeYear">WELCOME TO 2027</div>
+
+    <div class="welcome-sub">
+      A brand new year, a blank canvas,<br />
+      and infinite possibilities ahead of you.
+    </div>
+
+    <div class="tagline">✨ Make it count better than the last ✨</div>
+  </div>
+
+  <!-- Our script — loaded at the bottom so the DOM is ready -->
+  <script src="script.js"></script>
+</body>
+</html>

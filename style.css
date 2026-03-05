@@ -110,7 +110,7 @@ h1 {
   animation: fadeUp 0.9s ease 0.1s both, float 4s ease-in-out 1s infinite;
 }
 
-h1 a, a h1 {
+a, a:visited, a:hover {
   text-decoration: none;
   color: inherit;
 }

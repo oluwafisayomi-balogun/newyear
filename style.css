@@ -110,9 +110,9 @@ h1 {
   animation: fadeUp 0.9s ease 0.1s both, float 4s ease-in-out 1s infinite;
 }
 
-a h1 {
+h1 a, a h1 {
   text-decoration: none;
-  cursor: pointer;
+  color: inherit;
 }
 
 /* "Countdown to midnight" subtitle */
